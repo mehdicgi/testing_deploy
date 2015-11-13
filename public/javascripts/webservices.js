@@ -100,11 +100,11 @@ app.get('/api/acores/siteAcore/horaires/:codeAcore/:id', function (req, res) {
 
 var server = app.listen(8085, function ()
 {
-  // var host = server.address().address
+  var host = server.address().address
   //  var host = "localhost"
-   // var port = server.address().port
-    var host =  process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
-    var port =   process.env.OPENSHIFT_NODEJS_PORT || 8085
+   var port = server.address().port
+    //var host =  process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+  //  var port =   process.env.OPENSHIFT_NODEJS_PORT || 8085
     console.log("App listening at http://%s:%s", host, port)
 })
 
